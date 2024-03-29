@@ -2,8 +2,29 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { loginstart } from "../redux/adminSlice.js";
+import { useEffect } from 'react';
 
 export default function Login() {
+
+  useEffect(() => {
+    // Function to clear session storage
+    const clearSessionStorage = () => {
+        window.sessionStorage.clear();
+    };
+
+    // Call the function to clear session storage
+    clearSessionStorage();
+
+    // Clean-up function (not required in this case)
+    // If you need to perform any clean-up actions when the component unmounts,
+    // you can define it here.
+    return () => {
+        // Clean-up code (if any)
+    };
+  }, []);
+
+
+
   const [formdata, setFormdata] = useState({
     email: "",
     password: "",
