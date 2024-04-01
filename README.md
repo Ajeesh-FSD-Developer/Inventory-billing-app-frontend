@@ -1,8 +1,3 @@
-# React + Vite
+project error correction
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I corrected all the previous errors . I removed the console statements which is not required for deployement as mentioned in the mentor's comment. i also included form validation throughout the application. In customers and products page, scroll down to view the previously added products and customers. I further added responsiveness for all pages. So kindly recheck my capstone project and revaluate which would be helpful for my placement phase
