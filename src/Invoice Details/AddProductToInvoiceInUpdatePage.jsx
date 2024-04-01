@@ -25,7 +25,7 @@ export const AddProductToInvoiceInUpdatePage = () => {
   const [toalamountwithgst, setToalamountwithgst] = useState(0);
   const [error, setError] = useState(false);
   const [prevProducts, setPrevProducts] = useState([]);
-  console.log("currentproducts: " + currentproduct)
+  // console.log("currentproducts: " + currentproduct)
   const handlesearchProductID = async () => {
     try {
       const t=localStorage.getItem("access_token");
@@ -108,7 +108,7 @@ export const AddProductToInvoiceInUpdatePage = () => {
         const data = await res.json();
         setPrevProducts(data);
       } catch (error) {
-        console.error("Error fetching products:", error);
+        // console.error("Error fetching products:", error);
       }
     };
     fetching();
@@ -126,7 +126,7 @@ export const AddProductToInvoiceInUpdatePage = () => {
   useEffect(() => {
     calculateToalamountwithgst();
   }, [gstfortotalprice]);
-  console.log(prevProducts);
+  // console.log(prevProducts);
   const handleupdateaddproduct = async (e) => {
     e.preventDefault();
     if (currentproduct.productID !== 0 && error === false) {
@@ -155,14 +155,14 @@ export const AddProductToInvoiceInUpdatePage = () => {
       );
       const data = await res.json();
       if (data.success === false) {
-        console.log(data.message);
+        // console.log(data.message);
         setLoading(false);
       }
       setSuccess(true);
       setLoading(false);
       navigate(`/updateinvoice/${id}`)
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       setLoading(false);
       setSuccess(false);
     }

@@ -90,13 +90,13 @@ export default function AddProduct() {
       });
       const data = await res.json();
       if (data.message === false) {
-        console.log(data.message);
+        // console.log(data.message);
       }
 
       setPrevProducts(prevProducts.filter((product) => product._id !== id));
-      console.log(data);
+      // console.log(data);
     } catch (error) {
-      console.log(error.message);
+      // console.log(error.message);
     }
   };
 

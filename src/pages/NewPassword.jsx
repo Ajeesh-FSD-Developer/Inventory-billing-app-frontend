@@ -9,8 +9,8 @@ const NewPassword = () => {
   const [confirmNewPassword, setConfirmNewPassword] = useState("");
   const navigate = useNavigate();
   useEffect(() => {
-    console.log("User ID:", userId);
-    console.log("Token:", token);
+    // console.log("User ID:", userId);
+    // console.log("Token:", token);
   }, [userId, token]);
   const handleNewPasswordChange = (e) => {
     setNewPassword(e.target.value);

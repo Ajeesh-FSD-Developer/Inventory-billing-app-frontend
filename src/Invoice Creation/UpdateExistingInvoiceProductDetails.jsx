@@ -17,8 +17,8 @@ export const UpdateExistingInvoiceProductDetails = () => {
     "productid"
   );
 
-  console.log(id);
-  console.log(productid);
+  // console.log(id);
+  // console.log(productid);
   useEffect(() => {
     const fetching = async () => {
       try {
@@ -32,7 +32,7 @@ export const UpdateExistingInvoiceProductDetails = () => {
         );
 
         const data = await res.json();
-        console.log(data.length);
+        // console.log(data.length);
 
         if (data) {
           // Update the state with the first item in the array
@@ -43,10 +43,10 @@ export const UpdateExistingInvoiceProductDetails = () => {
             productprice: data.productprice,
           });
         } else {
-          console.error("Product not found");
+          // console.error("Product not found");
         }
       } catch (error) {
-        console.error(error);
+        // console.error(error);
       }
     };
 

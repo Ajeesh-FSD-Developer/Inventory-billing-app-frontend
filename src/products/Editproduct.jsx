@@ -29,7 +29,7 @@ export default function EditProduct() {
     };
     fetching();
   }, [params.id]);
-  console.log(formdata);
+  // console.log(formdata);
 
   const handlechange = (e) => {
     setFormdata({
@@ -56,7 +56,7 @@ export default function EditProduct() {
 
       if (!res.ok) {
         const data = await res.json();
-        console.log(data.message);
+        // console.log(data.message);
         return;
       }
 
@@ -65,7 +65,7 @@ export default function EditProduct() {
       setFormdata(data);
       navigate("/products");
     } catch (error) {
-      console.log(error.message);
+      // console.log(error.message);
     }
   };
 

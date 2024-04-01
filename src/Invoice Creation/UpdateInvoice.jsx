@@ -55,7 +55,7 @@ export const UpdateInvoice = () => {
         }
       );
       const data = await res.json();
-      console.log(data);
+      // console.log(data);
       if (data.success === false) {
         setErrorMessage(data.message);
         return setSuccessMessage(false);
@@ -89,16 +89,16 @@ export const UpdateInvoice = () => {
         }
       );
       const data = await res.json();
-      console.log(data);
+      // console.log(data);
       setPrevInvoiceDetails((previnvoice) => ({
         ...previnvoice,
         invoiceNumber: data.invoiceNumber,
         products: data.products,
         customer: data.customer,
       }));
-      console.log(previnvoiceDetails);
+      // console.log(previnvoiceDetails);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 
@@ -114,7 +114,7 @@ export const UpdateInvoice = () => {
 
         if (res.ok) {
           const data = await res.json();
-          console.log(data);
+          // console.log(data);
 
           if (data.invoice) {
             // Set the invoice details in your state

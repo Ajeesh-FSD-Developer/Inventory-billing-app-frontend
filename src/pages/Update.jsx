@@ -32,12 +32,12 @@ export default function Update() {
         body: JSON.stringify(formdata),
       });
       const data = await res.json();
-      console.log(data);
+      // console.log(data);
       if (data.message === false) {
         setLoading(false);
         setError(data.message);
       }
-      console.log(data);
+      // console.log(data);
       setSuccess(true);
 
       dispatch(updated(data));
@@ -47,13 +47,13 @@ export default function Update() {
     } catch (error) {
       setSuccess(false);
       setLoading(false);
-      console.log(error);
+      // console.log(error);
     }
   };
   const handledelete = async () => {
     try {
       const t = localStorage.getItem("access_token");
-      console.log("delete finished");
+      // console.log("delete finished");
       const res = await fetch(`https://inventory-billing-app-backend-roes.onrender.com/api/admin/logout`, {
         headers: {
           "content-type": "application/json",
@@ -62,16 +62,16 @@ export default function Update() {
       });
 
       const data = await res.json();
-      console.log(data);
+      // console.log(data);
       if (data.success === false) {
-        console.log(data.message);
+        // console.log(data.message);
         return;
       }
       localStorage.removeItem("access_token");
       dispatch(logout());
       navigate("/");
     } catch (error) {
-      console.log(error.message);
+      // console.log(error.message);
     }
   };
   return (

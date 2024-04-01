@@ -32,7 +32,7 @@ export default function Login() {
   const dispatch = useDispatch();
   const [error, setError] = useState(false);
   const navigate = useNavigate();
-  console.log(formdata);
+  // console.log(formdata);
   const handlechange = (e) => {
     setFormdata({
       ...formdata,
@@ -52,7 +52,7 @@ export default function Login() {
         body: JSON.stringify(formdata),
       });
       const data = await res.json();
-console.log(data)
+// console.log(data)
       // if (data.success === false) {
       //   console.log(data.message);
       //   return setError(data.message);
@@ -65,7 +65,7 @@ console.log(data)
       setError(false);
       navigate("/");
     } catch (error) {
-      console.log(error.message);
+      // console.log(error.message);
       setError(error.message);
     }
   };

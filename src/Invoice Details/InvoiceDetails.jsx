@@ -38,7 +38,7 @@ export default function InvoiceDetails() {
       );
 
       const data = await res.json();
-      console.log(data);
+      // console.log(data);
       if (data.success === false) {
         setError(data.message);
       }
@@ -75,7 +75,7 @@ export default function InvoiceDetails() {
     );
 
     const data = await res.json();
-    console.log(data);
+    // console.log(data);
     if (data.success === false) {
       setError(data.message);
       return;
@@ -97,7 +97,7 @@ export default function InvoiceDetails() {
         }
       );
       const data = await res.json();
-      console.log(data);
+      // console.log(data);
       if (data.success == false) {
         setError(data.message);
         return;
@@ -108,7 +108,7 @@ export default function InvoiceDetails() {
         prevInvoices.filter((invoice) => invoice._id !== deleteid)
       );
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 export default function ResetPassword() {
   const [formdata, setFormdata] = useState({ email: "" });
   const [result, setResult] = useState(false);
-  console.log(formdata);
+  // console.log(formdata);
   const navigate = useNavigate();
   const handlesubmit = async (e) => {
     e.preventDefault();
@@ -17,7 +17,7 @@ export default function ResetPassword() {
     });
     const data = await res.json();
     if (data.success == false) {
-      console.log(data.message);
+      // console.log(data.message);
       return;
     }
     setResult("Mail Sent Successfully");

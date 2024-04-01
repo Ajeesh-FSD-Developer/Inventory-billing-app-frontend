@@ -28,7 +28,7 @@ export default function Customer() {
       );
       const data = await res.json();
       if (data.success === false) {
-        console.log(data.message);
+        // console.log(data.message);
         return;
       }
       setCustomer(data);
@@ -57,7 +57,7 @@ export default function Customer() {
       );
       const data = await res.json();
       if (data.success === false) {
-        console.log(data.message);
+        // console.log(data.message);
         setLoading(false);
         setError(data.message);
         return;
@@ -67,7 +67,7 @@ export default function Customer() {
       setError(false);
       setFormdata(data);
     } catch (error) {
-      console.log(error.message);
+      // console.log(error.message);
       setError(error.message);
       setLoading(false);
     }
@@ -82,7 +82,7 @@ export default function Customer() {
       const data = await res.json();
       setCustomer(customer.filter((cus) => cus._id !== id));
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 

@@ -15,8 +15,8 @@ export default function Signup() {
   const handlechange = (e) => {
     setFormdata({ ...formdata, [e.target.id]: e.target.value });
   };
-  console.log(formdata);
-  console.log(error);
+  // console.log(formdata);
+  // console.log(error);
   const handlesubmit = async (e) => {
     e.preventDefault();
     try {

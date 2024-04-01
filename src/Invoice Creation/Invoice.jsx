@@ -83,9 +83,9 @@ export default function Invoice() {
       }
       setError(false);
       setCurrentCustomer(data);
-      console.log("customer", data);
+      // console.log("customer", data);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 
@@ -127,7 +127,7 @@ export default function Invoice() {
   useEffect(() => {
     currentproduct.productquantity = Number(currentproduct.productquantity);
     calculateTotalPrice();
-    console.log("prev products before sending the server side", prevProducts);
+    // console.log("prev products before sending the server side", prevProducts);
     calculateGstfortotalprice();
     calculateToalamountwithgst();
   }, [currentproduct, prevProducts, totalprice]);
@@ -187,9 +187,9 @@ export default function Invoice() {
       setPrevProducts([]);
       setDate(null);
       setError(false);
-      console.log(data);
+      // console.log(data);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       setError(error.message);
       setLoading(false);
     }

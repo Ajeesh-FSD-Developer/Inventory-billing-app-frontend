@@ -28,19 +28,19 @@ export default function Dashboard() {
           }
         );
         const data = await res.json();
-        console.log(data);
+        // console.log(data);
         
         if (data.success === false) {
-          console.log(data.message);
+          // console.log(data.message);
         }
         setDetails(data);
       } catch (error) {
-        console.error("Error fetching dashboard details:", error);
+        // console.error("Error fetching dashboard details:", error);
       }
     };
     fetching();
   }, [currentUser._id]);
-  console.log(details);
+  // console.log(details);
 
   const pieChartData = {
     labels: details.topProducts
@@ -86,7 +86,7 @@ export default function Dashboard() {
       },
     ],
   };
-  console.log(details);
+  // console.log(details);
 
   return (
     <div className="min-h-screen flex flex-col flex-shrink-0 w-full bg-white ">

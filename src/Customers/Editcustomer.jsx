@@ -26,12 +26,12 @@ export default function Editcustomer() {
       });
       const data = await res.json();
       if (data.success == false) {
-        console.log(data.message);
+        // console.log(data.message);
         setError(data.message);
       }
       setError(false);
       setFormdata(data);
-      console.log(data);
+      // console.log(data);
       
     };
 
@@ -53,14 +53,14 @@ export default function Editcustomer() {
       const data = await res.json();
       if (data.success === false) {
         setError(data.message);
-        return console.log(data.message);
+        // return console.log(data.message);
       }
       setFormdata(data);
       setError(false);
       navigate("/customer");
     } catch (error) {
       setError(error.message);
-      console.log(error.message);
+      // console.log(error.message);
     }
   };
   return (

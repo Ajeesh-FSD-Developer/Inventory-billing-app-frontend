@@ -29,7 +29,7 @@ export default function VerifySignup() {
 
     fetching();
   }, [id, token]);
-  console.log(user);
+  // console.log(user);
 
   const handlesubmit = async () => {
     const res = await fetch(
@@ -40,7 +40,7 @@ export default function VerifySignup() {
       setError(data.message);
       return;
     }
-    console.log(data);
+    // console.log(data);
     dispatch(loginstart(data));
     navigate("/dashboard");
   };

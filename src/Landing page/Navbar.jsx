@@ -36,7 +36,7 @@ const Navbar = () => {
       element.scrollIntoView({ behavior: "smooth" });
       closeMobileNav();
     } else {
-      console.error("Element not found with ID:", sectionId);
+      // console.error("Element not found with ID:", sectionId);
     }
   };
 
