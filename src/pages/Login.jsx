@@ -97,6 +97,7 @@ export default function Login() {
               id="email"
               className="border p-3 rounded-lg focus:outline-none focus:ring focus:border-blue-300 transition duration-300"
               onChange={handlechange}
+              required
             />
             {/* Password Input */}
             <input
@@ -105,6 +106,7 @@ export default function Login() {
               id="password"
               className="border p-3 rounded-lg focus:outline-none focus:ring focus:border-blue-300 transition duration-300"
               onChange={handlechange}
+              required
             />
             {/* Login Button */}
             <button className="bg-blue-800 p-3 rounded-lg uppercase text-white hover:opacity-80 transition duration-300">

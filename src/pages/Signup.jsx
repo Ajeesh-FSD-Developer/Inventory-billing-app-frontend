@@ -72,6 +72,8 @@ export default function Signup() {
               id="username"
               className="p-3 rounded-lg border focus:outline-none focus:ring focus:border-blue-300 transition duration-300"
               onChange={handlechange}
+              required
+              // title="Please enter user name"
             />
             {/* Email Input */}
             <input
@@ -80,6 +82,7 @@ export default function Signup() {
               id="email"
               className="p-3 rounded-lg border focus:outline-none focus:ring focus:border-blue-300 transition duration-300"
               onChange={handlechange}
+              required
             />
             {/* Password Input */}
             <input
@@ -88,6 +91,8 @@ export default function Signup() {
               id="password"
               className="p-3 rounded-lg border focus:outline-none focus:ring focus:border-blue-300 transition duration-300"
               onChange={handlechange}
+
+              required
             />
             {/* Register Button */}
             <button className="bg-blue-500 text-white font-bold p-3 rounded-lg uppercase hover:opacity-80 transition duration-300">
