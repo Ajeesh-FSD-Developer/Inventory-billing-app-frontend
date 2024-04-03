@@ -17,7 +17,7 @@ export default function Dashboard() {
     const fetching = async () => {    
       try {
         const t = localStorage.getItem("access_token");
-        console.log(t);
+        // console.log(t);
         const res = await fetch(
           `https://inventory-billing-app-backend-roes.onrender.com/api/dashboard/getdashboarddetails/${currentUser._id}`,
           {
